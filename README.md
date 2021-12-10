@@ -116,7 +116,7 @@ COntext API removes the need for prop drilling, store data on a context object a
 
 
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-Actions are objects contain an action type and associated data
+Actions are objects contain an action type and associated data.
 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
 
