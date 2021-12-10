@@ -10,7 +10,15 @@ import "./App.css";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "./actions";
 
-const App = ()=> {
+
+class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchSmurfs();
+  }
+
+  render(){
+
   return (
     <div className="App">
       <Header />
@@ -21,6 +29,7 @@ const App = ()=> {
       </main>
     </div>
   );
+  }
 }
 
 export default connect(null,{fetchSmurfs})(App);
