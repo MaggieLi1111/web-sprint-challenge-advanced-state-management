@@ -19,7 +19,7 @@ import { fetchSmurfs } from '../actions/index';
 
     useEffect(() => {
         fetchSmurfs();
-    },[])
+    },[]);
 
     if (isLoading) {
         return <h1>Loading...</h1>;
@@ -36,7 +36,6 @@ const mapStateToProps = (state) => {
     return {
         smurfs:state.smurfs,
         isLoading:state.isLoading,
-        error:state.error
     }
 }
 export default connect(mapStateToProps,{fetchSmurfs})(SmurfList);

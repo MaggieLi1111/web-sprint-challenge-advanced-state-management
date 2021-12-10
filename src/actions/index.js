@@ -12,12 +12,12 @@ export const fetchSmurfs = () => {
         dispatch({type:START_FETCH})
         axios.get("http://localhost:3333/smurfs")
         .then(res => {
-            console.log(res.data);
             dispatch({type:SUCCESSFUL_FETCH, payload:res.data})
 
         })
         .catch(err => {
-            dispatch({type:FAILED_FETCH, payload:err.error})
+            console.log("err",err)
+            dispatch({type:FAILED_FETCH, payload:err.message})
         })
     }
 }
